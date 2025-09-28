@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Automation Consulting for Real Estate Professionals</title>
-    <meta name="description" content="Custom AI automation solutions for real estate professionals. Stop doing repetitive tasks - let AI handle lead follow-up, document creation, and more.">
+    <title>AI Automation Concierge for Real Estate Professionals</title>
+    <meta name="description" content="We make the tools you already use work together — powered by AI. Or if you don't have them yet, we'll set up the right ones and automate your workflow.">
     
     <!-- Open Graph / Social Media -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="AI Automation Consulting for Real Estate">
-    <meta property="og:description" content="Custom AI automation solutions for real estate professionals">
+    <meta property="og:title" content="AI Automation Concierge for Real Estate">
+    <meta property="og:description" content="We make the tools you already use work together — powered by AI. Stop doing what AI can do better.">
     <meta property="og:image" content="/og-image.png">
     
     <!-- Favicon -->
@@ -107,7 +107,7 @@
 
         .problems-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px;
             margin-bottom: 50px;
         }
@@ -204,6 +204,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 30px;
+            margin-bottom: 50px;
         }
 
         .service-card {
@@ -255,6 +256,88 @@
             font-weight: bold;
         }
 
+        /* Logos Section */
+        .logos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 30px;
+            justify-items: center;
+            align-items: center;
+            margin-top: 40px;
+            padding: 40px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .logo-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            opacity: 0.7;
+            transition: opacity 0.3s ease;
+        }
+
+        .logo-item:hover {
+            opacity: 1;
+        }
+
+        .logo-icon {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #3498db;
+        }
+
+        .logo-name {
+            font-size: 0.9em;
+            color: #666;
+            font-weight: 500;
+        }
+
+        /* Flexibility Section */
+        .flexibility {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .flexibility h2 {
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 50px;
+            color: #2c3e50;
+        }
+
+        .flex-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .flex-item {
+            background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 50%);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            border-left: 5px solid #f39c12;
+            transition: transform 0.3s ease;
+        }
+
+        .flex-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .flex-item h3 {
+            color: #856404;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .flex-item p {
+            color: #856404;
+            line-height: 1.5;
+        }
+
         /* Results Section */
         .results {
             padding: 80px 0;
@@ -270,7 +353,7 @@
 
         .results-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 30px;
         }
 
@@ -287,9 +370,14 @@
         }
 
         .result-number {
-            font-size: 3em;
+            font-size: 2.5em;
             font-weight: bold;
             display: block;
+            margin-bottom: 10px;
+        }
+
+        .result-item h3 {
+            font-size: 1.3em;
             margin-bottom: 10px;
         }
 
@@ -462,6 +550,7 @@
             .problem,
             .process,
             .services,
+            .flexibility,
             .results,
             .testimonials,
             .final-cta {
@@ -487,23 +576,51 @@
             .results-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
+
+            .flex-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .logos-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
         }
 
         @media (max-width: 480px) {
             .results-grid {
                 grid-template-columns: 1fr;
             }
+
+            .logos-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
     </style>
 </head>
 <body>
+    <!-- Hidden form for Netlify detection -->
+    <form name="consultation" netlify netlify-honeypot="bot-field" hidden>
+        <input type="text" name="name" />
+        <input type="email" name="email" />
+        <input type="tel" name="phone" />
+        <select name="biggest-challenge">
+            <option value="lead-followup">Lead follow-up</option>
+            <option value="scheduling">Scheduling showings</option>
+            <option value="paperwork">Document creation</option>
+            <option value="market-analysis">Market analysis</option>
+            <option value="client-communication">Client communication</option>
+            <option value="other">Other</option>
+        </select>
+        <textarea name="message"></textarea>
+    </form>
+
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1>🤖 Stop Doing What AI Can Do Better</h1>
-            <div class="subtitle">Custom AI Automation for Real Estate Professionals</div>
+            <h1>🤖 Make Your Tools Work Together — With AI</h1>
+            <div class="subtitle">AI Automation Concierge for Real Estate Professionals</div>
             <div class="description">
-                I help real estate professionals identify repetitive tasks and build custom automation systems tailored to your specific business needs. No generic software - just personalized solutions that actually work for <em>your</em> workflow.
+                You already use CRMs, MLS systems, and marketing tools. We don't replace them — we connect them. And if you don't have them yet, we'll set up the right ones for you and automate your workflow. Either way, our AI concierge makes your business run like one seamless assistant, saving you hours every week.
             </div>
             <a href="#contact" class="cta-button">Get Free Consultation</a>
             <a href="#process" class="cta-button secondary">How It Works</a>
@@ -513,22 +630,27 @@
     <!-- Problem Section -->
     <section class="problem">
         <div class="container">
-            <h2>Tired of Spending Hours on Tasks AI Could Handle?</h2>
+            <h2>Why Most Agents Struggle With Their Tools</h2>
             <div class="problems-grid">
                 <div class="problem-item">
-                    <div class="problem-icon">😓</div>
-                    <h3>Manual Follow-ups</h3>
-                    <p>Spending hours each day sending emails, texts, and making calls to leads who may never respond</p>
+                    <div class="problem-icon">🔗</div>
+                    <h3>Disconnected Systems</h3>
+                    <p>Even with great CRMs and marketing platforms, agents spend hours copying data, rewriting content, and chasing leads manually because nothing talks to each other.</p>
+                </div>
+                <div class="problem-item">
+                    <div class="problem-icon">📊</div>
+                    <h3>Underutilized Tools</h3>
+                    <p>Most agents only use 20–30% of their existing tools. The rest sits idle because they don't know how to make everything work together efficiently.</p>
                 </div>
                 <div class="problem-item">
                     <div class="problem-icon">📝</div>
-                    <h3>Repetitive Paperwork</h3>
-                    <p>Creating the same documents, contracts, and listings over and over with minor variations</p>
+                    <h3>Manual Processes</h3>
+                    <p>Agents without proper tools waste even more time — relying on spreadsheets, email, and phone tag instead of automation.</p>
                 </div>
                 <div class="problem-item">
-                    <div class="problem-icon">🗓️</div>
-                    <h3>Scheduling Chaos</h3>
-                    <p>Playing phone tag to coordinate showings, inspections, and client meetings</p>
+                    <div class="problem-icon">⏰</div>
+                    <h3>Lost Opportunities</h3>
+                    <p>Opportunities slip through the cracks when follow-ups are missed or listings don't get marketed fast enough due to manual workflows.</p>
                 </div>
             </div>
         </div>
@@ -537,27 +659,27 @@
     <!-- Process Section -->
     <section class="process" id="process">
         <div class="container">
-            <h2>How We Work Together</h2>
+            <h2>How We Work With You</h2>
             <div class="process-steps">
                 <div class="process-step">
                     <div class="step-number">1</div>
-                    <h3>Discovery Session</h3>
-                    <p>We discuss your current processes, pain points, and time-consuming tasks in detail. I'll identify exactly where AI can make the biggest impact.</p>
+                    <h3>Discovery</h3>
+                    <p>We review your current setup — whether that's a full CRM stack or just email and MLS — and identify where you lose the most time.</p>
                 </div>
                 <div class="process-step">
                     <div class="step-number">2</div>
                     <h3>Custom Strategy</h3>
-                    <p>I design automation solutions using the best AI tools for your specific needs. Every system is tailored to your workflow and business model.</p>
+                    <p>We design automation workflows that either connect your existing systems or set up lightweight tools if you don't have them yet.</p>
                 </div>
                 <div class="process-step">
                     <div class="step-number">3</div>
                     <h3>Implementation</h3>
-                    <p>I set up and configure all systems, ensuring they integrate seamlessly with your existing tools and processes.</p>
+                    <p>We integrate AI-driven automation so your stack — new or old — works together seamlessly.</p>
                 </div>
                 <div class="process-step">
                     <div class="step-number">4</div>
                     <h3>Training & Support</h3>
-                    <p>You'll know exactly how everything works, with comprehensive training and ongoing support included.</p>
+                    <p>You'll know exactly how to use your upgraded stack, with ongoing support included.</p>
                 </div>
             </div>
         </div>
@@ -566,18 +688,18 @@
     <!-- Services Section -->
     <section class="services" id="services">
         <div class="container">
-            <h2>Automation Services I Provide</h2>
+            <h2>What We Automate For You</h2>
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-header">
                         <div class="service-icon">📧</div>
-                        <h3>Lead Management Automation</h3>
+                        <h3>Lead Follow-Up Automation</h3>
                     </div>
-                    <p>Automated follow-up sequences, lead scoring, and nurture campaigns that convert prospects into clients.</p>
+                    <p>Instant emails, texts, and CRM notes from your existing leads — or new lightweight tools if you don't yet have a CRM.</p>
                     <ul class="service-features">
-                        <li>Email/SMS automation sequences</li>
+                        <li>Connect your existing CRM or set up a simple one</li>
+                        <li>Automated email/SMS sequences</li>
                         <li>Lead scoring and prioritization</li>
-                        <li>CRM integration and data sync</li>
                         <li>Behavioral trigger responses</li>
                     </ul>
                 </div>
@@ -585,37 +707,37 @@
                 <div class="service-card">
                     <div class="service-header">
                         <div class="service-icon">📋</div>
-                        <h3>Property Marketing Systems</h3>
+                        <h3>Listing Marketing Automation</h3>
                     </div>
-                    <p>Generate compelling listings, manage inquiries, and coordinate showings automatically across all platforms.</p>
+                    <p>Auto-generate descriptions, social posts, and email blasts directly from MLS data.</p>
                     <ul class="service-features">
                         <li>AI-generated property descriptions</li>
                         <li>Multi-platform listing distribution</li>
-                        <li>Inquiry response automation</li>
-                        <li>Showing coordination systems</li>
+                        <li>Social media post automation</li>
+                        <li>Branded marketing materials</li>
                     </ul>
                 </div>
 
                 <div class="service-card">
                     <div class="service-header">
-                        <div class="service-icon">📊</div>
-                        <h3>Market Analysis Tools</h3>
+                        <div class="service-icon">🗓️</div>
+                        <h3>Smart Scheduling</h3>
                     </div>
-                    <p>Instant CMAs, market reports, and pricing recommendations using AI-powered data analysis.</p>
+                    <p>Coordinate showings, inspections, and meetings with calendar sync and client reminders — no more phone tag.</p>
                     <ul class="service-features">
-                        <li>Automated comparative market analysis</li>
-                        <li>Price recommendation algorithms</li>
-                        <li>Market trend reporting</li>
-                        <li>Investment property calculators</li>
+                        <li>Smart calendar optimization</li>
+                        <li>Automated appointment scheduling</li>
+                        <li>Client communication workflows</li>
+                        <li>Reminder and follow-up systems</li>
                     </ul>
                 </div>
 
                 <div class="service-card">
                     <div class="service-header">
                         <div class="service-icon">📄</div>
-                        <h3>Document & Contract Automation</h3>
+                        <h3>Document Workflows</h3>
                     </div>
-                    <p>Smart document generation, contract management, and compliance checking systems.</p>
+                    <p>Auto-populate contracts, track compliance, and sync signed documents — whether you're using DocuSign, Dotloop, or nothing yet.</p>
                     <ul class="service-features">
                         <li>Auto-populated contracts and forms</li>
                         <li>Document workflow management</li>
@@ -626,15 +748,15 @@
 
                 <div class="service-card">
                     <div class="service-header">
-                        <div class="service-icon">🗓️</div>
-                        <h3>Calendar & Communication</h3>
+                        <div class="service-icon">📊</div>
+                        <h3>Market Insights</h3>
                     </div>
-                    <p>Intelligent scheduling, client communication, and appointment management systems.</p>
+                    <p>Generate CMAs and neighborhood reports automatically, branded for your clients.</p>
                     <ul class="service-features">
-                        <li>Smart calendar optimization</li>
-                        <li>Automated appointment scheduling</li>
-                        <li>Client communication workflows</li>
-                        <li>Reminder and follow-up systems</li>
+                        <li>Automated comparative market analysis</li>
+                        <li>Price recommendation algorithms</li>
+                        <li>Market trend reporting</li>
+                        <li>Branded client presentations</li>
                     </ul>
                 </div>
 
@@ -652,29 +774,89 @@
                     </ul>
                 </div>
             </div>
+
+            <div class="logos-grid">
+                <div class="logo-item">
+                    <div class="logo-icon">📧</div>
+                    <div class="logo-name">Follow Up Boss</div>
+                </div>
+                <div class="logo-item">
+                    <div class="logo-icon">📋</div>
+                    <div class="logo-name">Dotloop</div>
+                </div>
+                <div class="logo-item">
+                    <div class="logo-icon">🏠</div>
+                    <div class="logo-name">KVCore</div>
+                </div>
+                <div class="logo-item">
+                    <div class="logo-icon">📧</div>
+                    <div class="logo-name">Outlook</div>
+                </div>
+                <div class="logo-item">
+                    <div class="logo-icon">🏘️</div>
+                    <div class="logo-name">MLS</div>
+                </div>
+                <div class="logo-item">
+                    <div class="logo-icon">✍️</div>
+                    <div class="logo-name">DocuSign</div>
+                </div>
+                <div class="logo-item">
+                    <div class="logo-icon">📱</div>
+                    <div class="logo-name">Chime</div>
+                </div>
+                <div class="logo-item">
+                    <div class="logo-icon">📊</div>
+                    <div class="logo-name">Wise Agent</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Flexibility Section -->
+    <section class="flexibility">
+        <div class="container">
+            <h2>We Meet You Where You Are</h2>
+            <div class="flex-grid">
+                <div class="flex-item">
+                    <h3>Already Have Tools?</h3>
+                    <p>We make them work together and unlock their full potential with AI. No need to switch platforms or learn new systems.</p>
+                </div>
+                <div class="flex-item">
+                    <h3>Don't Have Tools Yet?</h3>
+                    <p>We'll set you up with the right lightweight systems and automate them from day one. Start simple, scale smart.</p>
+                </div>
+                <div class="flex-item">
+                    <h3>Somewhere in Between?</h3>
+                    <p>No problem — we'll connect what you have and fill in the gaps with cost-effective solutions that actually work.</p>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Results Section -->
     <section class="results">
         <div class="container">
-            <h2>What My Clients Achieve</h2>
+            <h2>What Our Clients Achieve</h2>
             <div class="results-grid">
                 <div class="result-item">
                     <span class="result-number">15+</span>
-                    <div>Hours Reclaimed Per Week</div>
+                    <h3>Hours Saved Weekly</h3>
+                    <p>For agents with existing CRMs and tools, we cut busywork so you can focus on clients and closings.</p>
                 </div>
                 <div class="result-item">
-                    <span class="result-number">50%</span>
-                    <div>Faster Lead Response Times</div>
+                    <span class="result-number">⚡</span>
+                    <h3>Fast Setup for New Agents</h3>
+                    <p>For agents without systems, we install lightweight tools and automation so you're up and running quickly.</p>
                 </div>
                 <div class="result-item">
                     <span class="result-number">3x</span>
-                    <div>More Consistent Follow-up</div>
+                    <h3>More Consistent Follow-Up</h3>
+                    <p>Every lead gets the right touchpoints automatically — no one falls through the cracks.</p>
                 </div>
                 <div class="result-item">
-                    <span class="result-number">100%</span>
-                    <div>Customized to Your Business</div>
+                    <span class="result-number">50%</span>
+                    <h3>Faster Lead Response</h3>
+                    <p>AI answers and automations give you an edge in speed-to-lead without extra effort.</p>
                 </div>
             </div>
         </div>
@@ -686,7 +868,7 @@
             <h2>What Clients Say</h2>
             <div class="testimonial">
                 <div class="testimonial-text">
-                    "The automation system Sarah built for me has been a game-changer. I'm closing 40% more deals because I can focus on high-value activities instead of repetitive tasks. The lead follow-up system alone has increased my conversion rate dramatically."
+                    "I was already using Follow Up Boss and DocuSign, but they weren't talking to each other. Now my CRM automatically updates when contracts are signed, and my follow-up sequences adjust based on where clients are in the process. It's like having a personal assistant who never sleeps."
                 </div>
                 <div class="testimonial-author">
                     — Jennifer M., Top Producer, Premier Realty
@@ -698,8 +880,8 @@
     <!-- Final CTA Section -->
     <section class="final-cta" id="contact">
         <div class="container">
-            <h2>Ready to Automate Your Success?</h2>
-            <p>Let's discuss how AI can transform your real estate business with systems built specifically for you. Book a free consultation to explore the possibilities.</p>
+            <h2>Ready to Save 5–10 Hours a Week?</h2>
+            <p>Let's turn your CRM, MLS, and marketing tools — or help you get started with the right ones — into one seamless AI-powered assistant. No switching platforms, just more time and more closings.</p>
             
             <div class="contact-form">
                 <form name="consultation" method="POST" data-netlify="true" netlify-honeypot="bot-field">
@@ -724,21 +906,33 @@
                     </div>
                     
                     <div class="form-group">
+                        <label for="current-tools">What tools do you currently use?</label>
+                        <select id="current-tools" name="current-tools">
+                            <option value="">Select one...</option>
+                            <option value="full-stack">Full CRM + marketing stack</option>
+                            <option value="basic-crm">Basic CRM only</option>
+                            <option value="mls-email">Just MLS and email</option>
+                            <option value="spreadsheets">Mostly spreadsheets</option>
+                            <option value="nothing">Starting from scratch</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
                         <label for="biggest-challenge">What's your biggest time-waster?</label>
                         <select id="biggest-challenge" name="biggest-challenge">
                             <option value="">Select one...</option>
                             <option value="lead-followup">Lead follow-up</option>
+                            <option value="data-entry">Moving data between systems</option>
                             <option value="scheduling">Scheduling showings</option>
                             <option value="paperwork">Document creation</option>
-                            <option value="market-analysis">Market analysis</option>
-                            <option value="client-communication">Client communication</option>
+                            <option value="marketing">Creating marketing materials</option>
                             <option value="other">Other</option>
                         </select>
                     </div>
                     
                     <div class="form-group">
                         <label for="message">Tell me about your current challenges:</label>
-                        <textarea id="message" name="message" placeholder="What tasks take up most of your time? What would you like to automate first?"></textarea>
+                        <textarea id="message" name="message" placeholder="What tasks take up most of your time? What tools are you using that don't talk to each other?"></textarea>
                     </div>
                     
                     <button type="submit" class="submit-btn">Schedule Free Consultation</button>
@@ -766,8 +960,8 @@
                 <div class="footer-section">
                     <h3>Services</h3>
                     <div class="contact-info">
-                        Free Initial Consultation<br>
-                        Custom AI Solutions<br>
+                        Tool Integration & Setup<br>
+                        Custom AI Automations<br>
                         Ongoing Support Included
                     </div>
                 </div>
@@ -775,13 +969,13 @@
                     <h3>Guarantee</h3>
                     <div class="contact-info">
                         ROI Guarantee<br>
-                        30-Day Money Back<br>
+                        Work With Your Existing Tools<br>
                         No Long-term Contracts
                     </div>
                 </div>
             </div>
             <div style="border-top: 1px solid #34495e; padding-top: 20px; color: #bdc3c7;">
-                © 2025 Salt Road. All rights reserved. v1.01
+                © 2025 [Your Business Name]. All rights reserved.
             </div>
         </div>
     </footer>
@@ -801,10 +995,10 @@
             });
         });
 
-        // Form submission handling
-        document.querySelector('form').addEventListener('submit', function(e) {
-            // Let Netlify handle the form submission naturally
-            // The success message will show on the thank you page
+        // Form submission handling - let Netlify handle it naturally
+        document.querySelector('form[name="consultation"]').addEventListener('submit', function(e) {
+            // Let the form submit naturally to Netlify
+            // After submission, Netlify will handle the redirect or show success
         });
 
         // Add some entrance animations
