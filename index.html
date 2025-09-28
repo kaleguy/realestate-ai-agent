@@ -516,6 +516,52 @@
         .contact-info {
             color: #bdc3c7;
         }
+		
+		/* Logos Section */
+.logos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 30px;
+    justify-items: center;
+    align-items: center;
+    margin-top: 40px;
+    padding: 40px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.logo-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.logo-item:hover {
+    opacity: 1;
+}
+
+.logo-img {
+    max-height: 50px;
+    max-width: 120px;
+    object-fit: contain;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+
+.logo-item:hover .logo-img {
+    filter: grayscale(0%);
+}
+
+.logo-name {
+    font-size: 0.8em;
+    color: #666;
+    font-weight: 500;
+    margin-top: 8px;
+}
 
         /* Success Message */
         .success-message {
@@ -775,40 +821,40 @@
                 </div>
             </div>
 
-            <div class="logos-grid">
-                <div class="logo-item">
-                    <div class="logo-icon">📧</div>
-                    <div class="logo-name">Follow Up Boss</div>
-                </div>
-                <div class="logo-item">
-                    <div class="logo-icon">📋</div>
-                    <div class="logo-name">Dotloop</div>
-                </div>
-                <div class="logo-item">
-                    <div class="logo-icon">🏠</div>
-                    <div class="logo-name">KVCore</div>
-                </div>
-                <div class="logo-item">
-                    <div class="logo-icon">📧</div>
-                    <div class="logo-name">Outlook</div>
-                </div>
-                <div class="logo-item">
-                    <div class="logo-icon">🏘️</div>
-                    <div class="logo-name">MLS</div>
-                </div>
-                <div class="logo-item">
-                    <div class="logo-icon">✍️</div>
-                    <div class="logo-name">DocuSign</div>
-                </div>
-                <div class="logo-item">
-                    <div class="logo-icon">📱</div>
-                    <div class="logo-name">Chime</div>
-                </div>
-                <div class="logo-item">
-                    <div class="logo-icon">📊</div>
-                    <div class="logo-name">Wise Agent</div>
-                </div>
-            </div>
+<div class="logos-grid">
+    <div class="logo-item">
+        <img src="https://assets-global.website-files.com/5dc39024072b3c5b3abefce4/5de85a0f8ca3c20a7b8b4f4a_fub-logo-light.svg" alt="Follow Up Boss" class="logo-img">
+        <div class="logo-name">Follow Up Boss</div>
+    </div>
+    <div class="logo-item">
+        <img src="https://www.dotloop.com/wp-content/uploads/2022/03/dotloop-logo-teal.svg" alt="Dotloop" class="logo-img">
+        <div class="logo-name">Dotloop</div>
+    </div>
+    <div class="logo-item">
+        <img src="https://uploads-ssl.webflow.com/60b4ba1100b3b567a1ad8b4b/60c1a3b8f8e5d51b0c5e6c7f_kvcore-logo.svg" alt="KVCore" class="logo-img">
+        <div class="logo-name">KVCore</div>
+    </div>
+    <div class="logo-item">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/d/df/Microsoft_Office_Outlook_%282018%E2%80%93present%29.svg" alt="Microsoft Outlook" class="logo-img">
+        <div class="logo-name">Outlook</div>
+    </div>
+    <div class="logo-item">
+        <img src="https://www.docusign.com/sites/default/files/2022-08/docusign-logo.svg" alt="DocuSign" class="logo-img">
+        <div class="logo-name">DocuSign</div>
+    </div>
+    <div class="logo-item">
+        <img src="https://chime.me/wp-content/uploads/2021/03/chime-logo-color.svg" alt="Chime" class="logo-img">
+        <div class="logo-name">Chime</div>
+    </div>
+    <div class="logo-item">
+        <img src="https://www.wiseagent.com/images/wise-agent-logo.svg" alt="Wise Agent" class="logo-img">
+        <div class="logo-name">Wise Agent</div>
+    </div>
+    <div class="logo-item">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_Gmail_icon_%282020%29.svg" alt="Gmail" class="logo-img">
+        <div class="logo-name">Gmail</div>
+    </div>
+</div>
         </div>
     </section>
 
